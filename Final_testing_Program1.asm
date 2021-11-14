@@ -1,6 +1,6 @@
 addi R1 R0 3
 addi R2 R0 1
-and R3 R1 R2
+add R3 R1 R2
 or R3 R1 R2
 xor R3 R1 R2
 add R3 R1 R2
