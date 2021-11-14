@@ -1,0 +1,229 @@
+{
+    "ins_size": 16,
+    "rt_offset": 11,
+    "rs_offset": 8,
+    "funct_offset": 16,
+    "rd_offset": 14,
+    "iimm_offset": 16,
+    "iimm_mask": "1f",
+    "jimm_offset": 16,
+    "jimm_mask": "7ff",
+    "opcode_offset": 5,
+    "Types": [
+        "R0",
+        "I0",
+        "I1",
+        "I2",
+        "I3",
+        "J0",
+        "J1"
+    ],
+    "set": {
+        "R0": {
+            "instructions": {
+                "and": [
+                    "00000",
+                    "00"
+                ],
+                "cand": [
+                    "00000",
+                    "01"
+                ],
+                "or": [
+                    "00000",
+                    "10"
+                ],
+                "xor": [
+                    "00000",
+                    "11"
+                ],
+                "add": [
+                    "00001",
+                    "00"
+                ],
+                "nadd": [
+                    "00001",
+                    "01"
+                ],
+                "seq": [
+                    "00001",
+                    "10"
+                ],
+                "slt": [
+                    "00001",
+                    "11"
+                ]
+            },
+            "seperator": " =\t,R$",
+            "regs": {
+                "rd": 1,
+                "rs": 2,
+                "rt": 3,
+                "imm_label": -1,
+                "imm_int": -1,
+                "jmm_label": -1
+            }
+        },
+        "I0": {
+            "instructions": {
+                "lw": [
+                    "10100",
+                    "00"
+                ],
+                "sw": [
+                    "10101",
+                    "00"
+                ]
+            },
+            "seperator": " =\t,R$()",
+            "regs": {
+                "rd": -1,
+                "rs": 3,
+                "rt": 1,
+                "imm_label": -1,
+                "imm_int": 2,
+                "jmm_label": -1
+            }
+        },
+        "I1": {
+            "instructions": {
+                "andi": [
+                    "00100",
+                    "00"
+                ],
+                "candi": [
+                    "00101",
+                    "00"
+                ],
+                "ori": [
+                    "00110",
+                    "00"
+                ],
+                "xori": [
+                    "00111",
+                    "00"
+                ],
+                "addi": [
+                    "01000",
+                    "00"
+                ],
+                "naddi": [
+                    "01001",
+                    "00"
+                ],
+                "seqi": [
+                    "01010",
+                    "00"
+                ],
+                "slti": [
+                    "01011",
+                    "00"
+                ],
+                "sll": [
+                    "01100",
+                    "00"
+                ],
+                "srl": [
+                    "01101",
+                    "00"
+                ],
+                "sra": [
+                    "01110",
+                    "00"
+                ],
+                "ror": [
+                    "01111",
+                    "00"
+                ]
+            },
+            "seperator": " =\t,R$",
+            "regs": {
+                "rd": -1,
+                "rs": 2,
+                "rt": 1,
+                "imm_label": -1,
+                "imm_int": 3,
+                "jmm_label": -1
+            }
+        },
+        "I2": {
+            "instructions": {
+                "beq": [
+                    "10000",
+                    "00"
+                ],
+                "bne": [
+                    "10001",
+                    "00"
+                ],
+                "blt": [
+                    "10010",
+                    "00"
+                ],
+                "bge": [
+                    "10011",
+                    "00"
+                ]
+            },
+            "seperator": " =\t,R$",
+            "regs": {
+                "rd": -1,
+                "rs": 1,
+                "rt": 2,
+                "imm_label": 3,
+                "imm_int": -1,
+                "jmm_label": -1
+            }
+        },
+        "I3": {
+            "instructions": {
+                "jalr": [
+                    "11011",
+                    "00"
+                ]
+            },
+            "seperator": " =\t,R$",
+            "regs": {
+                "rd": -1,
+                "rs": 1,
+                "rt": 2,
+                "imm_label": -1,
+                "imm_int": -1,
+                "jmm_label": -1
+            }
+        },
+        "J0": {
+            "instructions": {
+                "j": [
+                    "11100",
+                    "00"
+                ],
+                "jal": [
+                    "11101",
+                    "00"
+                ]
+            },
+            "seperator": " =\t",
+            "regs": {
+                "rd": -1,
+                "rs": -1,
+                "rt": -1,
+                "imm_label": -1,
+                "imm_int": -1,
+                "jmm_label": 1
+            }
+        },
+        "J1": {
+            "instructions": {
+                "imm": [
+                    "11110",
+                    "00"
+                ]
+            },
+            "seperator": " =\t",
+            "regs": {
+                "imm_int12": 1
+            }
+        }
+    }
+}
